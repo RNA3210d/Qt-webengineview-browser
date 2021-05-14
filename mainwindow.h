@@ -24,7 +24,7 @@ private slots:
 
     void on_urledit_returnPressed();
 
-    void on_toolButton_clicked();
+    void on_pushButton_5_clicked();
 
 private:
     Ui::MainWindow *ui;
