@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -161,4 +162,16 @@ void MainWindow::on_pushButton_5_clicked()
 
 
 
+
+
+void MainWindow::on_horizontalSlider_sliderMoved(int position)
+{
+    ui->webEngineView->setZoomFactor(position);
+}
+
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    ui->webEngineView->page()->history();
+}
 

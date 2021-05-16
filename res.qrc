@@ -1,3 +1,5 @@
 <RCC>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>quick1.qml</file>
+    </qresource>
 </RCC>

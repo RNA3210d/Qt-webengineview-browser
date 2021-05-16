@@ -3,6 +3,7 @@ QT       +=webkitwidgets
 QT += webenginewidgets
 QT += core
 QT += quickwidgets
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
