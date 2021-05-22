@@ -40,10 +40,22 @@
        <property name="bottomMargin">
         <number>2</number>
        </property>
-       <item row="0" column="4">
-        <widget class="QLineEdit" name="urledit">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="font">
+          <font>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
          <property name="text">
-          <string>http://</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../../usr/share/icons/Papirus-Dark/16x16/actions/back.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16/actions/back.svg</iconset>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -55,6 +67,20 @@
          <property name="icon">
           <iconset>
            <normaloff>../../../usr/share/icons/Papirus-Dark/16x16/actions/go-today.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16/actions/go-today.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="9">
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="text">
+          <string>DuckDuckGo</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLineEdit" name="urledit">
+         <property name="text">
+          <string>http://</string>
          </property>
         </widget>
        </item>
@@ -80,22 +106,19 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton">
-         <property name="font">
-          <font>
-           <stylestrategy>PreferAntialias</stylestrategy>
-          </font>
+       <item row="0" column="8">
+        <widget class="QLineEdit" name="search">
+         <property name="minimumSize">
+          <size>
+           <width>9</width>
+           <height>0</height>
+          </size>
          </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../../usr/share/icons/Papirus-Dark/16x16/actions/back.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16/actions/back.svg</iconset>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
+         <property name="maximumSize">
+          <size>
+           <width>210</width>
+           <height>16777215</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -185,7 +208,18 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
+       <item row="0" column="4">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>Normal</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../../usr/share/icons/Papirus-Dark/16x16@2x/categories/org.xfce.panel.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16@2x/categories/org.xfce.panel.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
         <widget class="QSlider" name="horizontalSlider">
          <property name="maximumSize">
           <size>
@@ -213,17 +247,6 @@
          </property>
          <property name="invertedAppearance">
           <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4">
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="text">
-          <string>Normal</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../../usr/share/icons/Papirus-Dark/16x16@2x/categories/org.xfce.panel.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16@2x/categories/org.xfce.panel.svg</iconset>
          </property>
         </widget>
        </item>
@@ -256,6 +279,9 @@
       <property name="movable">
        <bool>true</bool>
       </property>
+      <property name="tabBarAutoHide">
+       <bool>true</bool>
+      </property>
       <widget class="QWidget" name="tab">
        <property name="toolTip">
         <string extracomment="Browser">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Browse here!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -264,7 +290,7 @@
         <number>11</number>
        </property>
        <attribute name="icon">
-        <iconset>
+        <iconset theme="browser">
          <normaloff>../../../usr/share/icons/Papirus-Dark/16x16/apps/browser.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16/apps/browser.svg</iconset>
        </attribute>
        <attribute name="title">
@@ -272,6 +298,9 @@
        </attribute>
        <attribute name="toolTip">
         <string>Browse here!</string>
+       </attribute>
+       <attribute name="whatsThis">
+        <string>Browser</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout">
         <property name="leftMargin">
@@ -308,7 +337,7 @@
         <number>2</number>
        </property>
        <attribute name="icon">
-        <iconset>
+        <iconset theme="settroubeshoot_icon">
          <normaloff>../../../usr/share/icons/Papirus-Dark/16x16/categories/setroubleshoot_icon.svg</normaloff>../../../usr/share/icons/Papirus-Dark/16x16/categories/setroubleshoot_icon.svg</iconset>
        </attribute>
        <attribute name="title">
@@ -318,6 +347,43 @@
         <string>System information and history</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTextBrowser" name="textBrowser_2">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;CPU info (lscpu):&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QTextBrowser" name="textBrowser_3">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;PCI Devices (lspci):&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QCalendarWidget" name="calendarWidget">
+          <property name="gridVisible">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QCalendarWidget::SingleSelection</enum>
+          </property>
+          <property name="horizontalHeaderFormat">
+           <enum>QCalendarWidget::ShortDayNames</enum>
+          </property>
+         </widget>
+        </item>
         <item row="1" column="0">
          <widget class="QTextBrowser" name="textBrowser">
           <property name="font">
@@ -352,48 +418,18 @@ p, li { white-space: pre-wrap; }
           </property>
          </widget>
         </item>
-        <item row="1" column="3">
-         <widget class="QTextBrowser" name="textBrowser_3">
-          <property name="html">
-           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;PCI Devices (lspci):&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QTextBrowser" name="textBrowser_2">
-          <property name="html">
-           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;CPU info (lscpu):&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QCalendarWidget" name="calendarWidget">
-          <property name="gridVisible">
-           <bool>true</bool>
-          </property>
-          <property name="selectionMode">
-           <enum>QCalendarWidget::SingleSelection</enum>
-          </property>
-          <property name="horizontalHeaderFormat">
-           <enum>QCalendarWidget::ShortDayNames</enum>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_2">
+       <attribute name="icon">
+        <iconset theme="mousepad">
+         <normaloff>.</normaloff>.</iconset>
+       </attribute>
        <attribute name="title">
         <string>Extras</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Text Viewer</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_7">
         <item row="0" column="0">
@@ -404,6 +440,108 @@ p, li { white-space: pre-wrap; }
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="2" column="0">
+            <widget class="QTextEdit" name="textEdit">
+             <property name="contextMenuPolicy">
+              <enum>Qt::CustomContextMenu</enum>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QFrame" name="frame">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>29</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <property name="leftMargin">
+               <number>1</number>
+              </property>
+              <property name="topMargin">
+               <number>1</number>
+              </property>
+              <property name="rightMargin">
+               <number>1</number>
+              </property>
+              <property name="bottomMargin">
+               <number>4</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_8">
+                <property name="text">
+                 <string>Open FIle</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pushButton_9">
+                <property name="text">
+                 <string>Clear Screen</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_10">
+                <property name="text">
+                 <string>Cut</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="pushButton_11">
+                <property name="text">
+                 <string>Copy</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QPushButton" name="pushButton_12">
+                <property name="text">
+                 <string>Paste</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="cut">
+                  <normaloff>.</normaloff>.</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -571,7 +709,7 @@ p, li { white-space: pre-wrap; }
    <slot>showNormal()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>841</x>
+     <x>930</x>
      <y>721</y>
     </hint>
     <hint type="destinationlabel">
@@ -587,7 +725,7 @@ p, li { white-space: pre-wrap; }
    <slot>showFullScreen()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>938</x>
+     <x>1027</x>
      <y>721</y>
     </hint>
     <hint type="destinationlabel">
@@ -625,6 +763,86 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>1067</x>
      <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>508</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>398</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>765</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1012</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>586</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_11</receiver>
+   <slot>showMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>766</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>751</x>
+     <y>102</y>
     </hint>
    </hints>
   </connection>

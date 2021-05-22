@@ -10,6 +10,12 @@
 #include <ios>
 #include <fstream>
 #include <string>
+#include <QFileDialog>
+#include <QFile>
+#include <QWebEngineSettings>
+#include <QWebEngineHistory>
+
+#include <QTextStream>
 using namespace std;
 
 
@@ -98,6 +104,7 @@ std::string com2()
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+
 {
 
 
@@ -152,18 +159,6 @@ void MainWindow::on_pushButton_5_clicked()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
     ui->webEngineView->setZoomFactor(position);
@@ -172,6 +167,28 @@ void MainWindow::on_horizontalSlider_sliderMoved(int position)
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    ui->webEngineView->page()->history();
+    QString fileName = QFileDialog::getOpenFileName(this,
+                       "Open Text File", ".", "Text files (*)" );
+    if ( fileName.isEmpty() )
+      return;
+
+    QFile file( fileName );
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+       return;
+
+    QTextStream in( &file );
+    while (!in.atEnd()) {
+       QString line = in.readLine();
+       ui->textEdit->append( line );
+    }
+}
+
+
+void MainWindow::on_pushButton_13_clicked()
+{
+
+  QUrl url=QUrl("http://google.com");
+
+  ui->webEngineView->load(url);
 }
 
