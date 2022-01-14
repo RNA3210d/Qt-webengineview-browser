@@ -177,6 +177,7 @@ void MainWindow::on_pushButton_8_clicked()
        return;
 
     QTextStream in( &file );
+    ui->textEdit->clear();
     while (!in.atEnd()) {
        QString line = in.readLine();
        ui->textEdit->append( line );
