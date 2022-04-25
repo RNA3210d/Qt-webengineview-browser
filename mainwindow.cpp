@@ -117,6 +117,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui-> textBrowser_3->append(s2);
 }
 
+
+
+//QString MainWindow::convert(QUrl input)
+//{
+//QString Input; Input = input.toEncoded();
+
+//return(Input);
+//}
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -191,5 +200,19 @@ void MainWindow::on_pushButton_13_clicked()
   QUrl url=QUrl("http://google.com");
 
   ui->webEngineView->load(url);
+}
+
+
+void MainWindow::on_pushButton_14_clicked()
+{
+    QUrl url=QUrl("https://github.com/RNA3210d/Qt-webengineview-simple-browser");
+
+    ui->webEngineView->load(url);
+}
+
+
+void MainWindow::on_webEngineView_urlChanged(const QUrl &arg1)
+{
+
 }
 
