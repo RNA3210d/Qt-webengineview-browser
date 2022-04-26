@@ -36,6 +36,9 @@ private slots:
 
     void on_webEngineView_urlChanged(const QUrl &arg1);
 
+    void on_pushButton_16_clicked();
+
+
 private:
     Ui::MainWindow *ui;
 };
