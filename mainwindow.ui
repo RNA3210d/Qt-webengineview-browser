@@ -42,6 +42,9 @@
        </property>
        <item row="0" column="2">
         <widget class="QPushButton" name="pushButton_2">
+         <property name="toolTip">
+          <string>Forward</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -58,6 +61,9 @@
            <stylestrategy>PreferAntialias</stylestrategy>
           </font>
          </property>
+         <property name="toolTip">
+          <string>Back</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -72,6 +78,9 @@
        </item>
        <item row="0" column="1">
         <widget class="QPushButton" name="pushButton_3">
+         <property name="toolTip">
+          <string>Refresh</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -83,6 +92,9 @@
        </item>
        <item row="0" column="7">
         <widget class="QPushButton" name="gobtn">
+         <property name="toolTip">
+          <string>Go</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -104,6 +116,9 @@
        </item>
        <item row="0" column="3">
         <widget class="QPushButton" name="pushButton_13">
+         <property name="toolTip">
+          <string>Home</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -139,6 +154,9 @@
        </property>
        <item row="0" column="6">
         <widget class="QPushButton" name="pushButton_5">
+         <property name="toolTip">
+          <string>Clear history</string>
+         </property>
          <property name="text">
           <string>Clear Logs</string>
          </property>
@@ -150,6 +168,9 @@
        </item>
        <item row="0" column="1">
         <widget class="QProgressBar" name="progressBar">
+         <property name="toolTip">
+          <string/>
+         </property>
          <property name="maximum">
           <number>100</number>
          </property>
@@ -160,6 +181,9 @@
        </item>
        <item row="0" column="4">
         <widget class="QPushButton" name="pushButton_6">
+         <property name="toolTip">
+          <string>Normal window size</string>
+         </property>
          <property name="text">
           <string>Normal</string>
          </property>
@@ -220,6 +244,9 @@
            <height>25</height>
           </size>
          </property>
+         <property name="toolTip">
+          <string>Loading progress...</string>
+         </property>
          <property name="smallDecimalPoint">
           <bool>false</bool>
          </property>
@@ -233,6 +260,9 @@
        </item>
        <item row="0" column="7">
         <widget class="QPushButton" name="pushButton_7">
+         <property name="toolTip">
+          <string>Quit</string>
+         </property>
          <property name="text">
           <string>Exit</string>
          </property>
@@ -244,6 +274,9 @@
        </item>
        <item row="0" column="5">
         <widget class="QPushButton" name="pushButton_4">
+         <property name="toolTip">
+          <string>Go fullscreen</string>
+         </property>
          <property name="text">
           <string>Fullscreen</string>
          </property>
@@ -255,6 +288,9 @@
        </item>
        <item row="0" column="3">
         <widget class="QPushButton" name="pushButton_14">
+         <property name="toolTip">
+          <string>View source code on Github</string>
+         </property>
          <property name="text">
           <string>SRC</string>
          </property>
@@ -270,7 +306,7 @@
     <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Logs and about&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string/>
       </property>
       <property name="toolTipDuration">
        <number>2</number>
@@ -581,10 +617,14 @@ hr { height: 1px; border-width: 0; }
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="icon">
-        <iconset theme="preferences-system-network"/>
+        <iconset theme="preferences-system-network">
+         <normaloff>.</normaloff>.</iconset>
        </attribute>
        <attribute name="title">
         <string>Network</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Network Details</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_12">
         <item row="0" column="0">
@@ -619,11 +659,15 @@ hr { height: 1px; border-width: 0; }
              </item>
              <item row="0" column="1">
               <widget class="QPushButton" name="pushButton_16">
+               <property name="toolTip">
+                <string>Start ping</string>
+               </property>
                <property name="text">
                 <string>Ping test</string>
                </property>
                <property name="icon">
-                <iconset theme="network-wired-acquiring"/>
+                <iconset theme="network-wired-acquiring">
+                 <normaloff>.</normaloff>.</iconset>
                </property>
               </widget>
              </item>
