@@ -23,7 +23,8 @@ using namespace std;
 //const QString s = QString::fromStdString( com1() );
 //ui->statusbar->showMessage(s);
 //---------- --------
-
+QObject *parent;
+QProcess* ping_process = new QProcess(parent);
 
 
 
@@ -159,7 +160,7 @@ void MainWindow::on_pushButton_16_clicked()
     QString ping=ui->lineEdit->text();
 
 
-        QProcess* ping_process = new QProcess(this);
+
         connect(ping_process, &QProcess::readyReadStandardOutput, [=] {
             ui->textBrowser_5->append(ping_process->readAllStandardOutput());
         });
@@ -168,4 +169,11 @@ void MainWindow::on_pushButton_16_clicked()
 }
 
 
+
+
+void MainWindow::on_pushButton_15_clicked()
+{
+    ping_process->terminate();
+    ui->statusbar->showMessage("Ping test stopped.");
+}
 
